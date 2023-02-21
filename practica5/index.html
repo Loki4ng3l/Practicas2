@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+
+    <!--Boton para agregar una nueva tarea-->
     <div class="container">
         <div class="row p-5">
             <div class="col-12 col-md-8">
@@ -36,7 +38,7 @@
         <div id="listaTareas"></div>
     </div>
 
-    <!-- Modal -->
+    <!--Modal-->
     <form name="formulario" id="formulario" method="post">
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -56,6 +58,33 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         <button type="submit" id="btnGuardar" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!--Modal-->
+    <form name="formularioEditar" id="formularioEditar" method="post">
+        <div class="modal fade" id="exampleModalEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva tarea</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="nombre">Nombre: </label>
+                        <input required type="text" name="nombreEditar" id="nombreEditar" class="form-control">
+                        <label for="nombre">Fecha: </label>
+                        <input required type="date" name="fechaEditar" id="fechaEditar" class="form-control">
+                        <label for="nombre">Descripción: </label>
+                        <textarea required name="descripcionEditar" id="descripcionEditar" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="idTarea" id="idTarea">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" id="btnGuardarEditar" class="btn btn-success">Guardar cambios</button>
                     </div>
                 </div>
             </div>
