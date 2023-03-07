@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prática 7</title>
 </head>
+
 <body>
     <p id="Lista"></p>
 
@@ -34,14 +36,14 @@
 
         let persona = "Mike";
         let edad = 28;
-        function miFuncion(cadenas, personaExp, edadExp){
+        function miFuncion(cadenas, personaExp, edadExp) {
             console.log(cadenas);
             console.log(cadenas[0]);
             console.log(personaExp);
             console.log(edadExp);
 
-            return edadExp>18 ? "Mayor de edad" : "Menor de edad";
-                
+            return edadExp > 18 ? "Mayor de edad" : "Menor de edad";
+
         }
         const resultado = miFuncion`El señor ${persona} tiene una edad de: ${edad}.`;
         console.log(resultado);
@@ -51,7 +53,7 @@
         let html = `<h2> ${titulo} </h2>`;
 
         html += "<ul>"
-        for(let cantante of cantantes){
+        for (let cantante of cantantes) {
             html += `<li>${cantante}</li>`
         }
 
@@ -60,4 +62,5 @@
 
     </script>
 </body>
+
 </html>
